@@ -1,6 +1,6 @@
 # Tracky - iOS
 
-## Adding tracky.ai to your iOS app
+## Adding Tracky to your iOS app
 
 ### Add AppsFlyer SDK
 AppsFlyer SDK could be added to your app as SPM package dependency. To do so, go to you project settings, Package Dependencies tab and add this package to your target: `Package Dependencies`. If you prefare something else then SPM or need more details, please visit AppsFlyer [Install SDK](https://dev.appsflyer.com/hc/docs/install-ios-sdk) guide.
@@ -49,5 +49,6 @@ More details could be found. [here](https://dev.appsflyer.com/hc/docs/integrate-
 
 ### Sending events
 - `StartTrial` - this event should be sent as soon as deepLink was received. This will be called automatically if you will use Tracky.swift.
-- `Purchase` - this event should be sent to track purchase. In Tracky.swift there is a cnvenient `trackPurchase(currency:value:)` method to call this.
+- `Purchase` - this event should be sent to track purchases. In Tracky.swift there is a cnvenient `trackPurchase(currency:value:)` method to call this.
+Currency and value parameters are mandatory.
 Check Tracky.swift to learn more about events. 
