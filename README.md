@@ -51,10 +51,10 @@ Find more details in the [iOS SDK Integration guide](https://dev.appsflyer.com/h
 
 ## Testing Your Integration
 
-### Facebook Configuration
-You can check a guide of how to test Facebook test Ads in [this document](https://github.com/tracky-ai/tracky-demo-iOS/blob/main/Doc/Tracky.AI%20-%20Creating%20a%20test%20Facebook%20Ads%20link.pdf).
+### 1. Facebook Configuration
+Please, check our guide on how to create a test link in [this document](https://github.com/tracky-ai/tracky-demo-iOS/blob/main/Doc/Tracky.AI%20-%20Creating%20a%20test%20Facebook%20Ads%20link.pdf).
 
-### Preparing Your Device
+### 2. Preparing Your Device
 Follow the comprehensive guide on [Registering test devices](https://support.appsflyer.com/hc/en-us/articles/207031996) for device preparation.
 
 We tested the AppsFlyer integration using the IDFV (Identifier for Vendor) method:
@@ -63,12 +63,12 @@ We tested the AppsFlyer integration using the IDFV (Identifier for Vendor) metho
 
 Keep the IDFV test tool app installed until all testing is complete. Note that Apple assigns a unique IDFV upon the installation of the first app from a vendor and removes it when the last app from that vendor is uninstalled. If you uninstall the test tool app, you might have to re-register your test device.
 
-### Running Tests on Your Device
+### 3. Running Tests on Your Device
 1. Uninstall your app from the device.
 2. Navigate to `https://tracky.ai/preland?..` using a browser, using the link generated in previous steps.
 3. On the preland page, click on the "Download on the AppStore" banner to be redirected to the OneLink landing page. If your app isn't available on the AppStore yet, a message stating "The app you are looking for is unavailable" will appear. This is expected.
 4. Compile and launch the app on your device using Xcode.
 5. Successful integration results in receiving deepLink data, including a `deepLinkValue` parameter. If using `Tracky.swift`, this value is handled automatically and can be accessed via the `Tracky.deepLinkValue` property.
 
-### Event Reception Verification
-[TODO]
+### Verify Events Reception in Facebook Events Manager
+1. You can verify that the test events are being received correctly in your [Facebook Events Manger](https://business.facebook.com/events_manager2/).
