@@ -17,7 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Existing AppDelegate variables
     
-    let tracky = Tracky()
+    let tracky = Tracky(
+        appsFlyerDevKey: "<YOUR_DEV_KEY>",
+        appleAppID: "<APPLE_APP_ID"
+    )
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Existing app initialization code
@@ -30,18 +33,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }    
 }
 ```
-Feel free to modify this code to suit your project's needs.
+
+Feel free to `Tracky.swift` code to suit your project's needs.
 
 ### Step 3: Updating AppsFlyer SDK Configuration 
-Before usage, update the `appsFlyerDevKey`, `appleAppID`, and `appInviteOneLinkID` parameters of the `AppsFlyerLib.shared()` instance:
+Before usage, update the `<YOUR_DEV_KEY>` and `<APPLE_APP_ID>`parameters of the `Tracky` initializer:
 ```swift
-AppsFlyerLib.shared().appsFlyerDevKey = "<YOUR_DEV_KEY>"
-AppsFlyerLib.shared().appleAppID = "<APPLE_APP_ID>"
-AppsFlyerLib.shared().appInviteOneLinkID = "<ONE_LINK_ID>"
+    let tracky = Tracky(
+        appsFlyerDevKey: "<YOUR_DEV_KEY>",
+        appleAppID: "<APPLE_APP_ID"
+    )
 ```
 - Acquire `<YOUR_DEV_KEY>` from the AppsFlyer dashboard. Refer to [Adding an app to AppsFlyer](https://support.appsflyer.com/hc/en-us/articles/207377436-Adding-an-app-to-AppsFlyer) if needed.
 - `<APPLE_APP_ID>` is your app's identifier in the AppStore.
-- Obtain `<ONE_LINK_ID>` for your app. See [OneLink ID information](https://support.appsflyer.com/hc/en-us/articles/208874366-OneLink-links-and-experiences#create-a-onelink-link) for guidance.
 
 Find more details in the [iOS SDK Integration guide](https://dev.appsflyer.com/hc/docs/integrate-ios-sdk).
 
