@@ -8,7 +8,7 @@ To incorporate the AppsFlyer SDK into your iOS app, you can add it as an SPM (Sw
 ### Step 2: Incorporating Tracky Code
 Firstly, add the `Tracky.swift` file to your project, which is available in this example project.
 
-For those utilizing the appDelegate, integrate the `start` method of the Tracky class instance within the `application:didFinishLaunchingWithOptions:` method as follows:
+For those utilizing the appDelegate, integrate the `start` method of the `Tracky` class instance within the `application:didFinishLaunchingWithOptions:` method as follows:
 ```swift
 import UIKit
 
@@ -52,7 +52,7 @@ Find more details in the [iOS SDK Integration guide](https://dev.appsflyer.com/h
 ## Testing Your Integration
 
 ### Facebook Configuration
-You can check a guide of how to test Facebook test Ads in [this document](Doc/Tracky.AI - Creating a test Facebook Ads link.pdf).
+You can check a guide of how to test Facebook test Ads in [this document](https://github.com/tracky-ai/tracky-demo-iOS/blob/main/Doc/Tracky.AI%20-%20Creating%20a%20test%20Facebook%20Ads%20link.pdf).
 
 ### Preparing Your Device
 Follow the comprehensive guide on [Registering test devices](https://support.appsflyer.com/hc/en-us/articles/207031996) for device preparation.
