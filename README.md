@@ -70,5 +70,5 @@ Keep the IDFV test tool app installed until all testing is complete. Note that A
 4. Compile and launch the app on your device using Xcode.
 5. Successful integration results in receiving deepLink data, including a `deepLinkValue` parameter. If using `Tracky.swift`, this value is handled automatically and can be accessed via the `Tracky.deepLinkValue` property.
 
-### Verify Events Reception in Facebook Events Manager
+### 4. Verify Events Reception in Facebook Events Manager
 1. You can verify that the test events are being received correctly in your [Facebook Events Manger](https://business.facebook.com/events_manager2/).
