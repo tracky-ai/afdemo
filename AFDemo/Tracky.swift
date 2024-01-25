@@ -8,7 +8,16 @@ import UIKit
 import AppsFlyerLib // SPM: https://github.com/AppsFlyerSDK/AppsFlyerFramework
 
 class AppsFlyerWorker: NSObject, AppsFlyerLibDelegate, DeepLinkDelegate {
-    
+    let appsFlyerDevKey: String
+    let appleAppID: String
+    init(
+        appsFlyerDevKey: String,
+        appleAppID: String
+    ) {
+        self.appsFlyerDevKey = appsFlyerDevKey
+        self.appleAppID = appleAppID
+    }
+
     var log: ((String) -> Void)? = nil
     var deepLinkHandler: ((String) -> Void)? = nil
     
@@ -19,15 +28,13 @@ class AppsFlyerWorker: NSObject, AppsFlyerLibDelegate, DeepLinkDelegate {
         self.log = log
         self.deepLinkHandler = deepLinkHandler
         
-        AppsFlyerLib.shared().appsFlyerDevKey = "<YOUR_DEV_KEY>"
-        AppsFlyerLib.shared().appleAppID = "<APPLE_APP_ID"
+        AppsFlyerLib.shared().appsFlyerDevKey = self.appsFlyerDevKey
+        AppsFlyerLib.shared().appleAppID = self.appleAppID
         
 //        AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
 
         AppsFlyerLib.shared().delegate = self
         AppsFlyerLib.shared().deepLinkDelegate = self
-        
-        AppsFlyerLib.shared().appInviteOneLinkID = "<ONE_LINK_ID>"
 
         #if DEBUG
         AppsFlyerLib.shared().isDebug = true
@@ -122,8 +129,15 @@ class AppsFlyerWorker: NSObject, AppsFlyerLibDelegate, DeepLinkDelegate {
 }
 
 class Tracky {
+    let appsFlyerWorker: AppsFlyerWorker
+    init(
+        appsFlyerDevKey: String,
+        appleAppID: String
+    ) {
+        appsFlyerWorker = AppsFlyerWorker(appsFlyerDevKey: appsFlyerDevKey, appleAppID: appleAppID)
+    }
+    
     var log: ((String) -> Void)? = nil
-    let appsFlyerWorker = AppsFlyerWorker()
     var deepLinkValue: String? {
         get { return UserDefaults.standard.value(forKey: "deepLinkValue") as? String }
         set { UserDefaults.standard.setValue(newValue, forKey: "deepLinkValue") }
