@@ -155,7 +155,7 @@ class Tracky {
     var task: URLSessionDataTask? = nil
     
     func trackEvent(deepLinkValue: String, eventName: String, params: [String: String] = [:]) {
-        let websiteId = "04bd0ceb-fe4d-4c93-a336-c8d9958b7ab1"
+        let websiteId = "6b3b5545-beac-4abe-afd6-e111a75ded0b"
         var urlString = "https://tracky-ai-backend.onrender.com/v1/websites/\(websiteId)/track/events/application?deep_link_value=\(deepLinkValue)&event_name=\(eventName)"
         for (key, value) in params {
             urlString.append("&\(key)=\(value)")
