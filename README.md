@@ -27,7 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let tracky = Tracky(
         appsFlyerDevKey: "<YOUR_DEV_KEY>",
-        appleAppID: "<APPLE_APP_ID>"
+        appleAppID: "<APPLE_APP_ID",
+        websiteID: "<TRACKY_WEBSITE_ID>"
     )
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -49,11 +50,14 @@ Before usage, update the `<YOUR_DEV_KEY>` and `<APPLE_APP_ID>`parameters of the 
 ```swift
     let tracky = Tracky(
         appsFlyerDevKey: "<YOUR_DEV_KEY>",
-        appleAppID: "<APPLE_APP_ID>"
+        appleAppID: "<APPLE_APP_ID>",
+        websiteID: "<TRACKY_WEBSITE_ID>"
     )
 ```
 - Acquire `<YOUR_DEV_KEY>` from the AppsFlyer dashboard. Refer to [Adding an app to AppsFlyer](https://support.appsflyer.com/hc/en-us/articles/207377436-Adding-an-app-to-AppsFlyer) if needed.
 - `<APPLE_APP_ID>` is your app's identifier in the AppStore.
+- `<TRACKY_WEBSITE_ID>` is your Tracky ID received at sales@tracky.ai .
+
 
 Find more details in the [iOS SDK Integration guide](https://dev.appsflyer.com/hc/docs/integrate-ios-sdk).
 
