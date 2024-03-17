@@ -61,8 +61,8 @@ Find more details in the [iOS SDK Integration guide](https://dev.appsflyer.com/h
 
 ### 1. Facebook Configuration
 Please, check our guide on how to create a test link in [this document](https://github.com/tracky-ai/tracky-demo-iOS/blob/main/Doc/Tracky.AI%20-%20Creating%20a%20test%20Facebook%20Ads%20link.pdf).
-- Your App's landing page will be located at `https://tracky.ai/lp/{YOUR_APP}`.
-- `{YOUR_APP}` url will be provided by the Tracky team.
+- Your App's landing page will be located at `https://tracky.ai/lp/<YOUR_APP>`.
+- `<YOUR_APP>` url will be provided by the Tracky team.
 
 ### 2. Preparing Your Device
 Follow the comprehensive guide on [Registering test devices](https://support.appsflyer.com/hc/en-us/articles/207031996) for device preparation.
@@ -75,7 +75,7 @@ Keep the IDFV test tool app installed until all testing is complete. Note that A
 
 ### 3. Running Tests on Your Device
 1. Uninstall your app from the device.
-2. Navigate to `https://tracky.ai/lp/{YOUR_APP}?fbclid=...` using a browser, via the link generated in previous steps.
+2. Navigate to `https://tracky.ai/lp/<YOUR_APP>?fbclid=...` using a browser, via the link generated in previous steps.
 3. On the landing page, click the "Download on the AppStore" button to be redirected to the AppStore. If your app isn't available on the AppStore yet, a message stating "The app you are looking for is unavailable" will appear. This is expected.
 4. Compile and launch the app on your device using Xcode.
 5. Integration is successful if you receive deepLink data, including a `deepLinkValue` parameter. If you use `Tracky.swift`, this value is handled automatically and can be accessed via the `Tracky.deepLinkValue` property.
