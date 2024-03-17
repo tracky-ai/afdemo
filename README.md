@@ -62,7 +62,7 @@ Find more details in the [iOS SDK Integration guide](https://dev.appsflyer.com/h
 ### 1. Facebook Configuration
 Please, check our guide on how to create a test link in [this document](https://github.com/tracky-ai/tracky-demo-iOS/blob/main/Doc/Tracky.AI%20-%20Creating%20a%20test%20Facebook%20Ads%20link.pdf).
 - Your App's landing page will be located at `https://tracky.ai/lp/<YOUR_APP>`.
-- `<YOUR_APP>` url will be provided by the Tracky team.
+- `<YOUR_APP>` url will be provided by the Tracky team during technical integration.
 
 ### 2. Preparing Your Device
 Follow the comprehensive guide on [Registering test devices](https://support.appsflyer.com/hc/en-us/articles/207031996) for device preparation.
