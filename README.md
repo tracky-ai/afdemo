@@ -71,10 +71,11 @@ Keep the IDFV test tool app installed until all testing is complete. Note that A
 
 ### 3. Running Tests on Your Device
 1. Uninstall your app from the device.
-2. Navigate to `https://tracky.ai/lp/{YOUR_APP}?fbclid=...` using a browser, using the link generated in previous steps.
-3. On the preland page, click on the "Download on the AppStore" banner to be redirected to the OneLink landing page. If your app isn't available on the AppStore yet, a message stating "The app you are looking for is unavailable" will appear. This is expected.
+2. Navigate to `https://tracky.ai/lp/{YOUR_APP}?fbclid=...` using a browser, via the link generated in previous steps.
+3. On the landing page, click the "Download on the AppStore" button to be redirected to the AppStore. If your app isn't available on the AppStore yet, a message stating "The app you are looking for is unavailable" will appear. This is expected.
 4. Compile and launch the app on your device using Xcode.
-5. Successful integration results in receiving deepLink data, including a `deepLinkValue` parameter. If using `Tracky.swift`, this value is handled automatically and can be accessed via the `Tracky.deepLinkValue` property.
+5. Integration is successful if you receive deepLink data, including a `deepLinkValue` parameter. If you use `Tracky.swift`, this value is handled automatically and can be accessed via the `Tracky.deepLinkValue` property.
 
 ### 4. Verify Events Reception in Facebook Events Manager
-1. You can verify that the test events are being received correctly in your [Facebook Events Manger](https://business.facebook.com/events_manager2/).
+1. Send test `StartTrial` or `Purchase` events from your iOS App.
+2. You can verify that the test events are being received correctly in your [Facebook Events Manger](https://business.facebook.com/events_manager2/). Test events typically appear in Events Manager within 30 minutes.
