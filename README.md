@@ -41,7 +41,7 @@ Before usage, update the `<YOUR_DEV_KEY>` and `<APPLE_APP_ID>`parameters of the 
 ```swift
     let tracky = Tracky(
         appsFlyerDevKey: "<YOUR_DEV_KEY>",
-        appleAppID: "<APPLE_APP_ID"
+        appleAppID: "<APPLE_APP_ID>"
     )
 ```
 - Acquire `<YOUR_DEV_KEY>` from the AppsFlyer dashboard. Refer to [Adding an app to AppsFlyer](https://support.appsflyer.com/hc/en-us/articles/207377436-Adding-an-app-to-AppsFlyer) if needed.
