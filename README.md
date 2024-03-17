@@ -10,7 +10,6 @@ Firstly, add the `Tracky.swift` file to your project, which is available in this
 - Replace `<YOUR_WEBSITEID>` with the value from your Tracky account. It wille be provided by the Tracky team.
 ```swift
     func trackEvent(deepLinkValue: String, eventName: String, params: [String: String] = [:]) {
-        let websiteId = "<YOUR_WEBSITEID>"
         var urlString = "https://tracky-ai-backend.onrender.com/v1/websites/\(websiteId)/track/events/application?deep_link_value=\(deepLinkValue)&event_name=\(eventName)"
         for (key, value) in params {
             urlString.append("&\(key)=\(value)")

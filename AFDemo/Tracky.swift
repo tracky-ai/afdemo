@@ -130,11 +130,14 @@ class AppsFlyerWorker: NSObject, AppsFlyerLibDelegate, DeepLinkDelegate {
 
 class Tracky {
     let appsFlyerWorker: AppsFlyerWorker
+    let websiteID: String
     init(
         appsFlyerDevKey: String,
-        appleAppID: String
+        appleAppID: String,
+        websiteID: String
     ) {
         appsFlyerWorker = AppsFlyerWorker(appsFlyerDevKey: appsFlyerDevKey, appleAppID: appleAppID)
+        self.websiteID = websiteID
     }
     
     var log: ((String) -> Void)? = nil
@@ -155,8 +158,7 @@ class Tracky {
     var task: URLSessionDataTask? = nil
     
     func trackEvent(deepLinkValue: String, eventName: String, params: [String: String] = [:]) {
-        let websiteId = "<YOUR_WEBSITEID>"
-        var urlString = "https://tracky-ai-backend.onrender.com/v1/websites/\(websiteId)/track/events/application?deep_link_value=\(deepLinkValue)&event_name=\(eventName)"
+        var urlString = "https://tracky-ai-backend.onrender.com/v1/websites/\(websiteID)/track/events/application?deep_link_value=\(deepLinkValue)&event_name=\(eventName)"
         for (key, value) in params {
             urlString.append("&\(key)=\(value)")
         }

@@ -12,7 +12,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var viewController: ViewController?
     let tracky = Tracky(
         appsFlyerDevKey: "<YOUR_DEV_KEY>",
-        appleAppID: "<APPLE_APP_ID"
+        appleAppID: "<APPLE_APP_ID",
+        websiteID: "<TRACKY_WEBSITE_ID>"
     )
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
