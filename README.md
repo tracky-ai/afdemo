@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-Feel free to `Tracky.swift` code to suit your project's needs.
+Feel free to modify `Tracky.swift` code to suit your project's needs.
 
 ### Step 3: Updating AppsFlyer SDK Configuration 
 Before usage, update the `<YOUR_DEV_KEY>` and `<APPLE_APP_ID>`parameters of the `Tracky` initializer:
