@@ -7,14 +7,6 @@ To incorporate the AppsFlyer SDK into your iOS app, you can add it as an SPM (Sw
 
 ### Step 2: Incorporating Tracky Code
 Firstly, add the `Tracky.swift` file to your project, which is available in this example project.
-- Replace `<YOUR_WEBSITEID>` with the value from your Tracky account. It wille be provided by the Tracky team.
-```swift
-    func trackEvent(deepLinkValue: String, eventName: String, params: [String: String] = [:]) {
-        var urlString = "https://tracky-ai-backend.onrender.com/v1/websites/\(websiteId)/track/events/application?deep_link_value=\(deepLinkValue)&event_name=\(eventName)"
-        for (key, value) in params {
-            urlString.append("&\(key)=\(value)")
-        }
-```
 
 For those utilizing the appDelegate, integrate the `start` method of the `Tracky` class instance within the `application:didFinishLaunchingWithOptions:` method as follows:
 ```swift
@@ -27,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let tracky = Tracky(
         appsFlyerDevKey: "<YOUR_DEV_KEY>",
-        appleAppID: "<APPLE_APP_ID",
+        appleAppID: "<APPLE_APP_ID>",
         websiteID: "<TRACKY_WEBSITE_ID>"
     )
     
@@ -46,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 Feel free to modify `Tracky.swift` code to suit your project's needs.
 
 ### Step 3: Updating AppsFlyer SDK Configuration 
-Before usage, update the `<YOUR_DEV_KEY>` and `<APPLE_APP_ID>`parameters of the `Tracky` initializer:
+Before usage, update the `<YOUR_DEV_KEY>`, `<APPLE_APP_ID>` and `<TRACKY_WEBSITE_ID>` parameters of the `Tracky` initializer:
 ```swift
     let tracky = Tracky(
         appsFlyerDevKey: "<YOUR_DEV_KEY>",
@@ -56,7 +48,7 @@ Before usage, update the `<YOUR_DEV_KEY>` and `<APPLE_APP_ID>`parameters of the 
 ```
 - Acquire `<YOUR_DEV_KEY>` from the AppsFlyer dashboard. Refer to [Adding an app to AppsFlyer](https://support.appsflyer.com/hc/en-us/articles/207377436-Adding-an-app-to-AppsFlyer) if needed.
 - `<APPLE_APP_ID>` is your app's identifier in the AppStore.
-- `<TRACKY_WEBSITE_ID>` is your Tracky ID received at sales@tracky.ai .
+- `<TRACKY_WEBSITE_ID>` is your Account ID which will be provided by the Tracky team during technical integration.
 
 
 Find more details in the [iOS SDK Integration guide](https://dev.appsflyer.com/hc/docs/integrate-ios-sdk).
