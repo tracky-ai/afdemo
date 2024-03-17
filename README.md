@@ -7,6 +7,16 @@ To incorporate the AppsFlyer SDK into your iOS app, you can add it as an SPM (Sw
 
 ### Step 2: Incorporating Tracky Code
 Firstly, add the `Tracky.swift` file to your project, which is available in this example project.
+```swift
+    func trackEvent(deepLinkValue: String, eventName: String, params: [String: String] = [:]) {
+        let websiteId = "<YOUR_WEBSITEID>"
+        var urlString = "https://tracky-ai-backend.onrender.com/v1/websites/\(websiteId)/track/events/application?deep_link_value=\(deepLinkValue)&event_name=\(eventName)"
+        for (key, value) in params {
+            urlString.append("&\(key)=\(value)")
+        }
+```
+- Replace `<YOUR_WEBSITEID>` with the value from your Tracky account. It wille be provided by the Tracky team.
+
 
 For those utilizing the appDelegate, integrate the `start` method of the `Tracky` class instance within the `application:didFinishLaunchingWithOptions:` method as follows:
 ```swift
