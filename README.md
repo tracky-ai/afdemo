@@ -7,6 +7,7 @@ To incorporate the AppsFlyer SDK into your iOS app, you can add it as an SPM (Sw
 
 ### Step 2: Incorporating Tracky Code
 Firstly, add the `Tracky.swift` file to your project, which is available in this example project.
+- Replace `<YOUR_WEBSITEID>` with the value from your Tracky account. It wille be provided by the Tracky team.
 ```swift
     func trackEvent(deepLinkValue: String, eventName: String, params: [String: String] = [:]) {
         let websiteId = "<YOUR_WEBSITEID>"
@@ -15,8 +16,6 @@ Firstly, add the `Tracky.swift` file to your project, which is available in this
             urlString.append("&\(key)=\(value)")
         }
 ```
-- Replace `<YOUR_WEBSITEID>` with the value from your Tracky account. It wille be provided by the Tracky team.
-
 
 For those utilizing the appDelegate, integrate the `start` method of the `Tracky` class instance within the `application:didFinishLaunchingWithOptions:` method as follows:
 ```swift
@@ -62,6 +61,7 @@ Find more details in the [iOS SDK Integration guide](https://dev.appsflyer.com/h
 ### Step 4: Event Handling
 - `StartTrial`: Trigger this event when a deepLink is received. `Tracky.swift` handles this automatically.
 - `Purchase`: To track purchases, use the `trackPurchase(currency:value:)` method in `Tracky.swift`. Currency and value parameters are mandatory. Refer to `Tracky.swift` for additional event details.
+Currency example - USD, Value example - 49.99.
 
 ## Testing Your Integration
 
