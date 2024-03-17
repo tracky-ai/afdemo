@@ -63,8 +63,7 @@ Find more details in the [iOS SDK Integration guide](https://dev.appsflyer.com/h
 
 ### Step 4: Event Handling
 - `StartTrial`: Trigger this event when a deepLink is received. `Tracky.swift` handles this automatically.
-- `Purchase`: To track purchases, use the `trackPurchase(currency:value:)` method in `Tracky.swift`. Currency and value parameters are mandatory. Refer to `Tracky.swift` for additional event details.
-Currency example - USD, Value example - 49.99.
+- `Purchase`: To track purchases, use the `trackPurchase(currency:value:)` method in `Tracky.swift`. Currency and value parameters are mandatory. Refer to `Tracky.swift` for additional event details. Example: `trackPurchase(currency: "USD",value: "9,99")`
 
 ## Testing Your Integration
 
