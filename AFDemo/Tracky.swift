@@ -201,9 +201,9 @@ class Tracky {
         }
     }
 
-    func trackFinalEvent() {
+    func trackStartTrial() {
         if let deepLinkValue = self.deepLinkValue {
-            self.trackEvent(deepLinkValue: deepLinkValue, eventName: "FinalEvent")
+            self.trackEvent(deepLinkValue: deepLinkValue, eventName: "StartTrial")
         }
     }
 }
