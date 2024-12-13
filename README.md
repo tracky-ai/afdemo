@@ -76,7 +76,7 @@ Keep the IDFV test tool app installed until all testing is complete. Note that A
 
 ### 3. Running Local Tests on Your Device
 1. Uninstall your app from the device.
-2. Use the test link generated in Step 1 to navigate to `https://tracky.ai/lp/<YOUR_APP>?fbclid=...` in a browser.
+2. Use the test link generated via `Facebook Configuration` instructions to navigate to `https://tracky.ai/lp/<YOUR_APP>?fbclid=...` in a browser.
 3. On the landing page, click the "Download on the AppStore" button to be redirected to the AppStore. If your app isn't available on the AppStore yet, a message stating "The app you are looking for is unavailable" will appear. This is expected.
 4. Compile and launch the app on your device using Xcode.
 5. Integration is successful if you receive deepLink data, including a `deepLinkValue` parameter. If you use `Tracky.swift`, this value is handled automatically and can be accessed via the `Tracky.deepLinkValue` property.
