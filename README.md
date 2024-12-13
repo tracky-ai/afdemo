@@ -74,13 +74,21 @@ We tested the AppsFlyer integration using the IDFV (Identifier for Vendor) metho
 
 Keep the IDFV test tool app installed until all testing is complete. Note that Apple assigns a unique IDFV upon the installation of the first app from a vendor and removes it when the last app from that vendor is uninstalled. If you uninstall the test tool app, you might have to re-register your test device.
 
-### 3. Running Tests on Your Device
+### 3. Running Local Tests on Your Device
 1. Uninstall your app from the device.
-2. Navigate to `https://tracky.ai/lp/<YOUR_APP>?fbclid=...` using a browser, via the link generated in previous steps.
+2. Use the test link generated in Step 1 to navigate to `https://tracky.ai/lp/<YOUR_APP>?fbclid=...` in a browser.
 3. On the landing page, click the "Download on the AppStore" button to be redirected to the AppStore. If your app isn't available on the AppStore yet, a message stating "The app you are looking for is unavailable" will appear. This is expected.
 4. Compile and launch the app on your device using Xcode.
 5. Integration is successful if you receive deepLink data, including a `deepLinkValue` parameter. If you use `Tracky.swift`, this value is handled automatically and can be accessed via the `Tracky.deepLinkValue` property.
 
-### 4. Verify Events Reception in Facebook Events Manager
+### 4. Running Production Test via App Store.
+1. Uninstall your app from the device.
+2. Use the test link generated in Step 1 to navigate to the landing page `https://tracky.ai/lp/<YOUR_APP>?fbclid=...` in a browser.
+3. On the landing page, click the "Download on the AppStore" button to be redirected to the AppStore.
+4. Install and open the App from the App Store.
+5. Trigger conversion events that you have set up in Step 4 while using the app (install, sign up, start trial, purchase, etc).
+6. Integration is successful if you receive the conversion events in your Tracky Dashboard. Events should be received in real-time.
+
+### 5. Verify Events Reception in Facebook Events Manager
 1. Send test `StartTrial` or `Purchase` events from your iOS App.
 2. You can verify that the test events are being received correctly in your [Facebook Events Manger](https://business.facebook.com/events_manager2/). Test events typically appear in Events Manager within 30 minutes.
