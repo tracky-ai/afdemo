@@ -83,12 +83,12 @@ Keep the IDFV test tool app installed until all testing is complete. Note that A
 
 ### 4. Running Production Test via App Store.
 1. Uninstall your app from the device.
-2. Use the test link generated in Step 1 to navigate to the landing page `https://tracky.ai/lp/<YOUR_APP>?fbclid=...` in a browser.
+2. Use the test link generated via `Facebook Configuration` instructions to navigate to the landing page `https://tracky.ai/lp/<YOUR_APP>?fbclid=...` in a browser.
 3. On the landing page, click the "Download on the AppStore" button to be redirected to the AppStore.
 4. Install and open the App from the App Store.
-5. Trigger conversion events that you have set up in Step 4 while using the app (install, sign up, start trial, purchase, etc).
+5. Trigger conversion events that you have set up in `Step 4: Event Handling` while using the app (install, sign up, start trial, purchase, etc).
 6. Integration is successful if you receive the conversion events in your Tracky Dashboard. Events should be received in real-time.
 
 ### 5. Verify Events Reception in Facebook Events Manager
-1. Send test `StartTrial` or `Purchase` events from your iOS App.
+1. Send test events from your iOS App, for example `StartTrial` or `Purchase` .
 2. You can verify that the test events are being received correctly in your [Facebook Events Manger](https://business.facebook.com/events_manager2/). Test events typically appear in Events Manager within 30 minutes.
